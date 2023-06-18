@@ -1,9 +1,22 @@
+
 export default function Header() {
   return (
-    <nav className="px-8 py-4 font-bold text-2xl shadow-sm">
+    <div className="px-8 flex justify-between items-center py-4 shadow-sm">
       <div className="container text-gray-800">
-        <a href="/">Project Manager</a>
+        <a href="/" className="font-semibold text-lg uppercase">
+          Project Manager
+        </a>
       </div>
-    </nav>
+      <nav>
+        <div className="flex justify-between items-center">
+          <a className="px-4" href="/">
+            Projects
+          </a>
+          <a className="px-4" href="/clients">
+            Clients
+          </a>
+        </div>
+      </nav>
+    </div>
   );
 }
