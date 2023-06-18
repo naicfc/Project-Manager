@@ -1,11 +1,10 @@
-import React from 'react'
-import Projects from '../components/Projects'
-import Clients from '../components/Clients'
+import React from "react";
+import Projects from "../components/Projects";
 
-export default function() {
+export default function Home() {
   return (
     <>
-    <Projects />
-    <Clients />
-    </>  )
+      <Projects />
+    </>
+  );
 }
