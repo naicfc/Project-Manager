@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_CLIENT } from "../mutations/clientMutations";
 import { GET_CLIENTS } from "../queries/clientQueries";
 
-export default function () {
+export default function ClientsForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -27,8 +27,8 @@ export default function () {
     if (name === "" || email === "" || phone === "") {
       return alert("Please fill in all fields");
     }
-    addClient(name,email,phone);
-    setName('');
+    addClient(name, email, phone);
+    setName("");
     setEmail("");
     setPhone("");
   };
@@ -45,6 +45,7 @@ export default function () {
         <input
           type="text"
           className="w-full p-2 border-none mb-3 shadow-sm shadow-gray-300 rounded-sm"
+          autoCapitalize="true"
           placeholder="Name"
           id="name"
           value={name}
